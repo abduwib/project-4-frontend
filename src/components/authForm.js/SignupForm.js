@@ -25,8 +25,9 @@ class SignupForm extends Component {
     })
       .then(res => res.json())
       .then(data => {
-        if (data.error) this.setState({ err: data.error });
+        if (data.status > 200 ) this.setState({ err: data.message });
         else {
+          console.log(data)
           setUser(data);
           this.props.onSignin();
         }
