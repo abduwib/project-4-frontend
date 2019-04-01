@@ -25,40 +25,16 @@ const unauthenticatedOptions = changeActivePage => (
   </React.Fragment>
 );
 
-const alwaysOptions = changeActivePage => (
-  <React.Fragment>
-    <li className="nav-item" onClick={() => changeActivePage("home")}>
-      <div className="nav-link">Home</div>
-    </li>
-  </React.Fragment>
-);
-
 const Nav = ({ user, changeActivePage, onSignout }) => (
-  <nav className="navbar navbar-expand-lg navbar-light bg-light">
-    <div className="navbar-brand">Navbar</div>
-    <button
-      className="navbar-toggler"
-      type="button"
-      data-toggle="collapse"
-      data-target="#navbarNav"
-      aria-controls="navbarNav"
-      aria-expanded="false"
-      aria-label="Toggle navigation"
-    >
-      <span className="navbar-toggler-icon" />
-    </button>
-    <div className="collapse navbar-collapse" id="navbarNav">
-      <ul className="navbar-nav">
-        {alwaysOptions(changeActivePage)}
+  <nav className="navbar navbar-expand-lg navbar-light ">
 
+    <div className="collapse navbar-collapse" id="navbarNav">
+      <ul className="navbar-nav ml-auto ">
+  
         {user
           ? authenticatedOptions(changeActivePage, onSignout)
           : unauthenticatedOptions(changeActivePage)}
-        {/* {user && (
-          <li className="nav-item">
-            <div className="nav-link"> Hola, {user.email.split("@")[0]}</div>
-          </li>
-        )} */}
+     
       </ul>
     </div>
   </nav>
