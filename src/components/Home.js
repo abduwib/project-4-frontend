@@ -42,7 +42,7 @@ class Home extends React.Component {
       return (
         <div className="container-fluid main-page"> 
             <div className="row">
-                <div className="col-3 browsemore"><button className='b1'> Browse more </button></div>
+                <div className="col-3 browsemore"><button className='b1' onClick={() => this.props.changeActivePage ("categories")}> Browse more </button></div>
                 <div className="col-9" > <div className="boxes row flex-row-reverse"> {recipes} </div></div>
             </div> 
             <div className="row">
@@ -82,16 +82,14 @@ class Home extends React.Component {
                 </div>
                 <div className="col-2 icons">
                     <img className="socialIcons" src="https://cdn4.iconfinder.com/data/icons/social-media-logos-6/512/62-instagram-128.png"/>
-                    <img className="socialIcons" src="https://cdn4.iconfinder.com/data/icons/social-media-logos-6/512/71-github-128.png"/>
-                    <img className="socialIcons" src="https://cdn4.iconfinder.com/data/icons/social-media-logos-6/512/45-reddit-128.png"/>
-                    <img className="socialIcons" src="https://cdn4.iconfinder.com/data/icons/social-media-logos-6/512/28-twitch-128.png"/>
-                    <img className="socialIcons" src="https://cdn4.iconfinder.com/data/icons/social-media-logos-6/512/35-spotify-128.png"/>
-                    <img className="socialIcons" src="https://cdn4.iconfinder.com/data/icons/social-media-logos-6/512/83-facebook-128.png"/>
+                    <img className="socialIcons" src="https://cdn4.iconfinder.com/data/icons/social-media-logos-6/512/4-youtube_video-128.png"/>
+                    
+                    <img className="socialIcons" src="https://cdn4.iconfinder.com/data/icons/social-media-logos-6/512/80-facebook-128.png"/>
                     <img className="socialIcons" src="https://cdn4.iconfinder.com/data/icons/social-media-logos-6/512/39-snapchat-128.png"/>
                     <img className="socialIcons" src="https://cdn4.iconfinder.com/data/icons/social-media-logos-6/512/30-tumblr-128.png"/>
                     <img className="socialIcons" src="https://cdn4.iconfinder.com/data/icons/social-media-logos-6/512/48-pinterest-128.png"/>
                     <img className="socialIcons" src="https://cdn4.iconfinder.com/data/icons/social-media-logos-6/512/24-twitter_tweet-128.png"/>
-                    <img className="socialIcons" src="https://cdn4.iconfinder.com/data/icons/social-media-logos-6/512/77-flickr-128.png"/>
+                    
                     <img className="socialIcons" src="https://cdn4.iconfinder.com/data/icons/social-media-logos-6/512/112-gmail_email_mail-128.png"/>
                     <img className="socialIcons" src=""/>
                     

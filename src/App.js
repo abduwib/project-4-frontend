@@ -19,19 +19,26 @@ class App extends Component {
       this.setState({ user });
     }
   }
-
   changeActivePage = activePage => {
     this.setState({ activePage });
-  };
+    this.changeActivePage("categories")
+  }
+  
+  changeActivePage = activePage => {
+    this.setState({ activePage });
+  }
+
   onSignin = () => {
     this.setState({ user: getUser() });
     this.changeActivePage("profile");
-  };
+  }
+
   onSignout = () => {
     console.log("sigin out");
     this.setState({ user: null });
     Signout();
-  };
+  }
+
   render() {
     const { user, activePage } = this.state;
     return (
