@@ -41,9 +41,10 @@ class App extends Component {
           changeActivePage={this.changeActivePage}
           onSignout={this.onSignout}
         />
+            {activePage === "home" ? <Home /> : ""}
 
         <div className="container">
-          {activePage === "home" ? <Home /> : ""}
+      
           {activePage === "sign-in" ? (
             <SigninForm onSignin={this.onSignin} />
           ) : (
