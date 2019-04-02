@@ -60,6 +60,11 @@ class App extends Component {
           ) : (
             ""
           )}
+          {activePage === "footer" ? (
+            <ChangePasswordForm changeActivePage={this.changeActivePage} />
+          ) : (
+            ""
+          )}
           {activePage === "profile" ? <Profile /> : ""}
         </div>
       </div>

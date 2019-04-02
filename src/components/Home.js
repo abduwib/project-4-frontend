@@ -10,25 +10,30 @@ class Home extends React.Component {
         // for now using an array
         this.setState({
             recipes: [ 
-                {name: 'buddha bowl', image: 'https://tse2.mm.bing.net/th?id=OIP.frwuctRxqaHZiAMXi6h9oQHaKT'},
-                {name: 'zuchinni burger', image: 'https://www.halfbakedharvest.com/wp-content/uploads/2016/06/Roasted-Zucchini-Burgers-with-Garlic-Whipped-Feta-6.jpg'},
-                {name: 'rice paper rolls', image: 'https://veganheaven.org/wp-content/uploads/2016/07/Rice-Paper-Rolls-with-Mango-and-Mint-13.jpg'},
-                {name: 'stuffed mushrooms', image: 'https://veganhuggs.com/wp-content/uploads/2017/12/crabless-vegan-stuffed-mushrooms-3-1024x683.jpg'},
-                {name: 'muffins', image: 'https://www.halfbakedharvest.com/wp-content/uploads/2015/07/Double-Chocolate-Coconut-oil-Zucchini-Muffins-with-Caramelized-Buckwheat-6.jpg'},
-                {name: 'noodles', image: 'https://veganheaven.org/wp-content/uploads/2016/07/Rice-Paper-Rolls-with-Mango-and-Mint-13.jpg'},
+                {name: 'Buddha Bowl', image: 'https://tse2.mm.bing.net/th?id=OIP.frwuctRxqaHZiAMXi6h9oQHaKT', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et.' },
+                {name: 'Roasted Zuchinni Burger', image: 'https://www.halfbakedharvest.com/wp-content/uploads/2016/06/Roasted-Zucchini-Burgers-with-Garlic-Whipped-Feta-6.jpg', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et.' },
+                {name: 'Rice Paper Rolls', image: 'https://veganheaven.org/wp-content/uploads/2016/07/Rice-Paper-Rolls-with-Mango-and-Mint-13.jpg', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et.' },
+                {name: 'Stuffed Mushrooms', image: 'https://veganhuggs.com/wp-content/uploads/2017/12/crabless-vegan-stuffed-mushrooms-3-1024x683.jpg', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et.' },
+                {name: 'Muffins', image: 'https://www.halfbakedharvest.com/wp-content/uploads/2015/07/Double-Chocolate-Coconut-oil-Zucchini-Muffins-with-Caramelized-Buckwheat-6.jpg', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et.' },
+                {name: 'Noodles', image: 'https://www.halfbakedharvest.com/wp-content/uploads/2019/02/Better-Than-Takeout-Szechuan-Noodles-with-Sesame-Chili-Oil-1-1-700x1050.jpg', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et.' },
             ]
         })
     }
     render() {
       const recipes = this.state.recipes.map(recipe => {
         const customStyle = {
-            background: "url(" + recipe.image + ")",
+            background: "url(" + recipe.image + ") ",
+            backgroundSize: "cover"
+            
         }
         return (
             <div className= 'col-sm-12 col-md-3 recipe-box m-4' style={customStyle}>
                 <div className='foodpic'> 
                     <div>
-                        <div className='description'>{recipe.name}</div>
+                        <div className='description'>{recipe.name}
+                        <hr/>
+                        <div>{recipe.description}</div>
+                        </div>
                     </div>
                 </div>
             </div> 
@@ -37,7 +42,7 @@ class Home extends React.Component {
       return (
         <div className="container-fluid main-page"> 
             <div className="row">
-                <div className="col-3"><button className='b1'> Browse more </button></div>
+                <div className="col-3 browsemore"><button className='b1'> Browse more </button></div>
                 <div className="col-9" > <div className="boxes row flex-row-reverse"> {recipes} </div></div>
             </div> 
             <div className="row">
@@ -45,9 +50,9 @@ class Home extends React.Component {
                     {/* logo */}
                 </div>
             </div>
-            <hr className="footer-line"></hr>
+            {/* <hr className="footer-line"></hr> */}
             <div className="row footer">
-                <div className="col-3"></div>
+                <div className="col-2 footerlogo"><h1>Recipes</h1></div>
                 <div className="col-2 ">
                     <div className="footer-widget ">
                         <div className="footer-title">Company</div>
@@ -69,18 +74,28 @@ class Home extends React.Component {
                         </ul>
                     </div>
                 </div>
-                <div className="col-2 ">
-                    <div className="footer-widget ">
-                        <div className="footer-title">Social</div>
-                        <ul className="list-unstyled">
-                            <li><a href="#">Twitter</a></li>
-                            <li><a href="#">Google +</a></li>
-                            <li><a href="#">Linked In</a></li>
-                            <li><a href="#">Facebook</a></li>
-                        </ul>
+                <div className="col-4 ">
+                    <div className="footer-widget">
+                        <div className="footer-title">About Us!</div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
                     </div>
                 </div>
-                <div className="col-3"></div>
+                <div className="col-2 icons">
+                    <img className="socialIcons" src="https://cdn4.iconfinder.com/data/icons/social-media-logos-6/512/62-instagram-128.png"/>
+                    <img className="socialIcons" src="https://cdn4.iconfinder.com/data/icons/social-media-logos-6/512/71-github-128.png"/>
+                    <img className="socialIcons" src="https://cdn4.iconfinder.com/data/icons/social-media-logos-6/512/45-reddit-128.png"/>
+                    <img className="socialIcons" src="https://cdn4.iconfinder.com/data/icons/social-media-logos-6/512/28-twitch-128.png"/>
+                    <img className="socialIcons" src="https://cdn4.iconfinder.com/data/icons/social-media-logos-6/512/35-spotify-128.png"/>
+                    <img className="socialIcons" src="https://cdn4.iconfinder.com/data/icons/social-media-logos-6/512/83-facebook-128.png"/>
+                    <img className="socialIcons" src="https://cdn4.iconfinder.com/data/icons/social-media-logos-6/512/39-snapchat-128.png"/>
+                    <img className="socialIcons" src="https://cdn4.iconfinder.com/data/icons/social-media-logos-6/512/30-tumblr-128.png"/>
+                    <img className="socialIcons" src="https://cdn4.iconfinder.com/data/icons/social-media-logos-6/512/48-pinterest-128.png"/>
+                    <img className="socialIcons" src="https://cdn4.iconfinder.com/data/icons/social-media-logos-6/512/24-twitter_tweet-128.png"/>
+                    <img className="socialIcons" src="https://cdn4.iconfinder.com/data/icons/social-media-logos-6/512/77-flickr-128.png"/>
+                    <img className="socialIcons" src="https://cdn4.iconfinder.com/data/icons/social-media-logos-6/512/112-gmail_email_mail-128.png"/>
+                    <img className="socialIcons" src=""/>
+                    
+                </div>
         </div>
     
         </div>
