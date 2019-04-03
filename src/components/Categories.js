@@ -192,7 +192,7 @@ class Categories extends React.Component {
     }
     render() {
         
-        <div className='col-4 sidebar'>
+        <div className='col-3 fixedSidebar'>
             <h1>Recipes</h1>
             <h3>Home</h3>
             <h3>Search</h3>
@@ -208,7 +208,7 @@ class Categories extends React.Component {
                 backgroundSize: "cover"
             }
             return (
-                <div className= 'col-8 row-6' style={thumbnails}>
+                <div className= 'col-9 row-6' style={thumbnails}>
                 <h2>{recipe.category}</h2>
                     <div className='thumbnail'> 
                         <div>
