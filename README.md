@@ -5,7 +5,7 @@
  
   
 
-## Screenshot
+##
 
 ![](recipes.gif)
 
