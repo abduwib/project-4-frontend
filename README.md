@@ -11,9 +11,9 @@
 
 ## Specs to add
 
-- Customizable features.
-- Daily quotes.
-- Weather and time.
+- Shuffle between recipes at home page!
+- Recommendations..
+- Add final-draft of categories Page
 
 ### Acknoledgements:
 
